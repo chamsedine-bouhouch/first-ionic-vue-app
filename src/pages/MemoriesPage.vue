@@ -1,7 +1,11 @@
 <template lang="">
     <base-layout page-title="All Memories">
 <!-- Slot Add button -->
-
+<template v-slot:actions-end>
+ <ion-button router-link="/memories/add">
+   <ion-icon slot="icon-only" :icon="add"></ion-icon>
+ </ion-button>
+</template>
 
     <!-- Memories List -->
     <ion-list>
@@ -18,7 +22,16 @@
 
 </template>
 <script>
-import { IonList, IonItem, IonImg, IonThumbnail, IonLabel } from "@ionic/vue";
+import {
+  IonList,
+  IonItem,
+  IonImg,
+  IonThumbnail,
+  IonLabel,
+  IonButton,
+  IonIcon,
+} from "@ionic/vue";
+import { add } from "ionicons/icons";
 export default {
   components: {
     IonList,
@@ -26,9 +39,13 @@ export default {
     IonImg,
     IonThumbnail,
     IonLabel,
+    IonButton,
+    IonIcon,
   },
   data() {
-    return {};
+    return {
+      add,
+    };
   },
   computed: {
     memories() {

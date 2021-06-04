@@ -26,7 +26,7 @@ const store = createStore({
         },
       ],
     };
-  },
+  },        
   getters: {
     memories(state) {
       return state.memories;
@@ -35,6 +35,17 @@ const store = createStore({
       return (id) => {
         return state.memories.find((memory) => memory.id === id);
       };
+    },
+  },
+  mutations: {
+    addMemory(state, memoryData) {
+      const newMemory = {
+        id: new Date().toISOString,
+        title: memoryData.title,
+        image: memoryData.imageUrl,
+        description: memoryData.description,
+      };
+      state.memories.unshift(newMemory);
     },
   },
 });

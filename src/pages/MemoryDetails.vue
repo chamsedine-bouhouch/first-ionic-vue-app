@@ -1,7 +1,7 @@
  <template lang="">
     <base-layout :page-title="loaddedMemory ? loaddedMemory.title : 'Loading...' " page-default-back-link="/memories">
 <div v-if="!loaddedMemory">Data not found</div>
-<div v-else>
+<div v-else  class="ion-padding">
     <ion-img :src="loaddedMemory.image" :alt="loaddedMemory.title"></ion-img>
         <h2 class="ion-text-center"> {{ loaddedMemory.title }}</h2>
 

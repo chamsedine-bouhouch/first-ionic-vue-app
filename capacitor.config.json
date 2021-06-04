@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "first-ionic-vue-app",
-	"webDir": "dist",
-	"bundledWebRuntime": false
+  "appId": "tn.darydar.memories",
+  "appName": "Memories",
+  "webDir": "public",
+  "bundledWebRuntime": false
 }

@@ -1,0 +1,6 @@
+{
+	"appId": "tn.darydar.memories",
+	"appName": "Memories",
+	"webDir": "public",
+	"bundledWebRuntime": false
+}
